@@ -1,0 +1,33 @@
+.about-us {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: #f0e6e6;
+}
+
+.about-us .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+.about-us {
+    padding: 32px;
+}
+
+.about-us .container {
+    padding: 0;
+}
+}
+
+
+@media (min-width: 1440px) {
+.about-us {
+    padding: 64px;
+}
+
+.about-us .container {
+    flex-direction: row;
+}
+}
