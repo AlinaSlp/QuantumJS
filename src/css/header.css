@@ -1,3 +1,6 @@
+body {
+  background-color: #080c09;
+}
 .header {
   background-color: #ffffff;
   padding-top: 17px;
@@ -14,28 +17,123 @@
   border: none;
 }
 
-.burger-btn-icon {
+.header.menu-open .burger-btn {
+  display: none;
+}
+
+.burger-btn-icon,
+.close-btn-icon {
   fill: #080c09;
 }
 
-.close-btn {
-  display: none;
-}
-.close-btn-icon {
-}
 .header-nav {
   display: none;
 }
+.header.menu-open .header-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  gap: 32px;
+}
+.menu-top-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.close-btn,
+.close-btn-tablet {
+  display: none;
+}
+
+.header.menu-open .close-btn {
+  display: block;
+  background-color: transparent;
+  border: none;
+}
+
+.menu-top-wrapper {
+  display: none;
+}
+
+.header.menu-open .menu-top-wrapper {
+  display: flex;
+}
 .nav-links-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding: 0 20px;
 }
 .header-nav-link {
   display: block;
   color: inherit;
+  font-weight: 500;
+  font-size: 18px;
 }
 
+.nav-links-list .button {
+  width: 335px;
+}
 .nav-button {
   display: block;
   color: #ffffff;
+}
+
+@media screen and (max-width: 374px) {
+  .nav-links-list .button {
+    width: 100%;
+  }
+
+  .menu-top-wrapper {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    position: relative;
+  }
+  .header.menu-open .menu-top-wrapper {
+    display: none;
+  }
+
+  .header.menu-open .header-nav {
+    position: absolute;
+    width: 249px;
+    height: auto;
+    top: 100%;
+    right: 0;
+    left: auto;
+    padding: 32px 24px;
+  }
+
+  .nav-links-list .button {
+    width: 185px;
+  }
+
+  .nav-links-list {
+    align-items: end;
+    padding: 0;
+  }
+  .close-btn-tablet {
+    display: none;
+  }
+  .header.menu-open .close-btn-tablet {
+    display: block;
+    background-color: transparent;
+    border: none;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -47,9 +145,14 @@
     display: block;
   }
   .nav-links-list {
-    display: flex;
+    flex-direction: row;
     gap: 32px;
     align-items: center;
+  }
+
+  .header-nav-link {
+    font-weight: inherit;
+    font-size: inherit;
   }
 
   .header-nav-link:hover,
