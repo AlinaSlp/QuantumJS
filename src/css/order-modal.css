@@ -1,7 +1,7 @@
 .modal-overlay {
   position: fixed;
   inset: 0;
-  display: none; /* hidden by default, shown when .is-open is added */
+  display: none;
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.25);
@@ -10,12 +10,10 @@
   isolation: isolate;
 }
 
-/* show overlay when is-open */
 .modal-overlay.is-open {
   display: flex;
 }
 
-/* Modal */
 .modal {
   display: flex;
   flex-direction: column;
@@ -27,10 +25,8 @@
   background: #fff;
   border-radius: 8px;
   position: relative;
-  font-family: 'Raleway', sans-serif;
 }
 
-/* Close button */
 .modal-close {
   position: absolute;
   width: 32px;
@@ -45,7 +41,6 @@
   z-index: 1;
 }
 
-/* Section Title */
 .section-title {
   display: flex;
   flex-direction: column;
@@ -55,15 +50,15 @@
 }
 
 .modal-heading {
+  width: 295px;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 36px;
   line-height: 120%;
   text-align: center;
   letter-spacing: 0.01em;
   color: #080c09;
 }
 
-/* Form */
 .modal-form {
   display: flex;
   flex-direction: column;
@@ -72,7 +67,6 @@
   width: 295px;
 }
 
-/* Field group */
 .modal-field {
   display: flex;
   flex-direction: column;
@@ -98,7 +92,6 @@
   line-height: 160%;
   color: #080c09;
   padding: 8px 12px;
-  font-family: 'Raleway', sans-serif;
   outline: none;
   transition: all 0.2s ease;
 }
@@ -145,17 +138,11 @@
   display: block;
 }
 
-.modal-heading {
-  font-size: 36px;
-  width: 295px;
-}
-
 .modal-field textarea {
   height: 180px;
   resize: none;
 }
 
-/* Button styles */
 .modal-button {
   display: flex;
   justify-content: center;
@@ -215,7 +202,6 @@
     width: 640px;
   }
   .modal-heading {
-    font-size: 36px;
     width: 530px;
   }
   .modal-form {
