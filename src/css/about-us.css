@@ -44,11 +44,11 @@
         align-items: center;
         justify-content: center;
         gap: 24px;
+        padding: 64px;
     }
 
     .about-us-text {
         width: 644px;        
     }
-
 
 }
