@@ -18,6 +18,10 @@ html {
   justify-content: space-between;
 }
 
+.logo-header {
+  height: 35px;
+}
+
 .overlay {
   display: block;
   position: fixed;
@@ -152,14 +156,14 @@ html {
   }
 
   .nav-links-list .button {
-    width: 130px;
+    width: 185px;
     height: 42px;
-    padding: 8px 20px;
+    padding: 8px 43px;
   }
 
   .nav-links-list {
     align-items: end;
-    max-width: 175px;
+    max-width: 185px;
     padding: 0;
   }
   .close-btn-tablet {
@@ -189,10 +193,6 @@ html {
 
   .header-nav {
     display: block;
-    /* position: absolute;
-    top: auto;
-    right: 0;
-    left: auto; */
   }
   
   .nav-links-list {

@@ -20,6 +20,7 @@
 .footer-logo {
   display: inline-flex;
   align-items: center;
+  height: 97px;
 }
 
 .footer-logo-icon {
@@ -104,7 +105,7 @@
   .footer-container {
     padding-right: 32px;
     padding-left: 32px;
-    }
+  }
 
   .footer-menu {
     flex-direction: row;
@@ -121,7 +122,6 @@
     flex-direction: row;
     gap: 80px;
     padding: 0 64px;
-    height: 97px;
   }
 
   .footer-logo,
@@ -130,11 +130,16 @@
     margin: 0;
   }
 
+  .footer-logo {
+    order: 1;
+  }
+
   .footer-logo-icon {
     display: block;
   }
 
   .footer-copy {
+    order: 2;
     white-space: nowrap;
     line-height: 1;
     text-align: left;
@@ -143,6 +148,7 @@
   }
 
   .footer-nav {
+    order: 3;
     min-width: 0;
     display: flex;
     justify-content: center;
@@ -159,6 +165,7 @@
   }
 
   .footer-social {
+    order: 4;
     display: flex;
     align-items: center;
     gap: 24px;

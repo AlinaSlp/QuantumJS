@@ -21,7 +21,7 @@
   border-top: 1px solid rgba(8, 12, 9, 0.15);
 }
 .ac-header {
-  padding: 20px 0;
+  padding: 21px 0;
 }
 
 .ac-trigger {
@@ -76,6 +76,12 @@
 .faq .ac .ac-trigger::after {
   content: none;
   display: none;
+}
+
+@media only screen and (min-width: 768px) {
+ .container {
+    padding: 32px;
+  }
 }
 
 @media only screen and (min-width: 1440px) {

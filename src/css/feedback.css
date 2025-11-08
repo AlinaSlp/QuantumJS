@@ -4,8 +4,12 @@
   align-items: stretch;
 }
 
+.reviews .container {
+  padding: 64px 20px;
+}
+
 .container-review {
-  margin: 80px 20px 48px 0;
+  margin: 80px 0 48px 0;
 }
 
 .title-review {
@@ -128,6 +132,9 @@
 
   .review-exemplar {
     width: 421px;
-    padding-right: 48px;
+  }
+
+  .text-review {
+    height: 128px;
   }
 }

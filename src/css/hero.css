@@ -3,6 +3,10 @@ background-image: url(../img/hero-mob.webp);
 background-size: cover;
 }
 
+.hero .container {
+    padding: 136px 20px;
+}
+
 @media screen and (min-resolution: 2x) {
     .hero {
     background-image: url(../img/hero-mob@2x.webp);
@@ -63,6 +67,10 @@ background-size: cover;
     background-image: url(../img/hero-tab@2x.webp);
     background-size: cover;
     }
+}
+
+.hero .container {
+padding: 80px 32px;
 }
 
 .hero-title {
