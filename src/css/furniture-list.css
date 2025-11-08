@@ -1,5 +1,5 @@
 .furniture__header {
-  display:flex;
+  display: flex;
   gap: 16px;
   flex-direction: column;
 }
@@ -163,6 +163,115 @@
     url('../img/furniture-list/decor-category@2x.jpg') 2x
   );
 }
+
+/* ///////////////////////////////////////////////////////////////// */
+/* ---------- Список товарів: 1 / 2 / 3 / 4 колонки ---------- */
+.furniture-list {
+  margin-top: 8px;
+  max-width: 1312px;
+}
+
+.products-grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 16px;
+
+  /* reset списку */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Якщо li = картка, забезпечує рівну висоту в гріді */
+.products-grid > li {
+  display: flex;
+}
+
+/* ---------- Картка товару ---------- */
+.product-card {
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+}
+
+/* Зображення */
+.product-card__media {
+  background: #f4f4f4;
+}
+.product-card__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+/* Контент */
+.product-card__body {
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+}
+.product-card__title {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Кольорові свотчі */
+.product-card__colors {
+  display: flex;
+  gap: 8px;
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+}
+.color-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ccc; /* перезапиши inline-стилем */
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* Ціна */
+.product-card__price {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Кнопка */
+.product-card__btn {
+  width: 100%;
+  height: 38px;
+  border-radius: 999px;
+  border: 0;
+  background: #f0f1f2;
+  color: #111;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.06s ease;
+}
+.product-card__btn:hover {
+  background: #e6e7ea;
+}
+.product-card__btn:active {
+  transform: translateY(1px);
+}
+
 @media (min-width: 768px) {
   .furniture__subtitle {
     width: 704px;
@@ -175,11 +284,13 @@
     width: 158px;
   }
 
-.category-chip__label {
-  width: 126px;
+  .category-chip__label {
+    width: 126px;
+  }
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
-}
-
 @media (min-width: 1440px) {
   .furniture__title {
     font-size: 48px;
@@ -205,6 +316,15 @@
   }
   .furniture__load-more:hover,
   .furniture__load-more:focus {
-  opacity: 0.5;
-}
+    opacity: 0.5;
+  }
+  .furniture-list {
+    margin-top: 8px;
+    max-width: 1312px;
+    margin: 0 auto;
+  }
+  .products-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+  }
 }
