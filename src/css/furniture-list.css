@@ -296,6 +296,7 @@
     box-shadow: inset 0 0 0 8px #6b0609, 0 4px 14px rgba(0, 0, 0, 0.1);
   }
   .furniture__load-more {
+    margin-top: 32px;
     width: 421px;
   }
   .furniture-categories__list {
