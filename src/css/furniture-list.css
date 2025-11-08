@@ -3,22 +3,26 @@
   gap: 16px;
   flex-direction: column;
 }
+
 .furniture__title {
   font-size: 36px;
 }
 .furniture__subtitle {
   font-size: 18px;
-  width: 335px;
+}
+.furniture-categories {
+  margin: 0 auto;
 }
 .furniture-categories__list {
   display: grid;
-  grid-template-columns: repeat(2, 166px);
-  gap: 12px;
+  grid-template-columns: repeat(2, 159px);
+  gap: 16px;
   justify-content: center;
   padding: 0;
   margin: 40px 0;
   list-style: none;
 }
+
 .furniture-categories__item {
   width: 160px;
   height: 122px;
@@ -63,14 +67,10 @@
 
 .category-chip__label {
   position: relative;
-  display: block;
-  margin: 0 auto;
-  width: 127px;
   color: #fff;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 140%;
-  letter-spacing: 0.01em;
+  font-size: 14px;
+  line-height: 1.15;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
   pointer-events: none;
 }
@@ -273,12 +273,9 @@
 }
 
 @media (min-width: 768px) {
-  .furniture__subtitle {
-    width: 704px;
-  }
   .furniture-categories__list {
-    gap: 20px;
-    grid-template-columns: repeat(4, 166px);
+    gap: 24px;
+    grid-template-columns: repeat(4, 158px);
   }
   .furniture-categories__item {
     width: 158px;
@@ -302,7 +299,6 @@
     width: 421px;
   }
   .furniture-categories__list {
-    gap: 22px;
     grid-template-columns: repeat(7, 166px);
   }
   .furniture-categories__item {
