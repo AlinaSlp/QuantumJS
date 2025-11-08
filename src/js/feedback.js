@@ -2,8 +2,6 @@ const reviewsContainer = document.querySelector(".js-review");
 import { BASE_URL } from "./pixabay-api";
 import axios from 'axios';
 
-
-
 export async function loadFeedbacks(page=1) {
   try {
     const response = await axios.get(`${BASE_URL}feedbacks`);
