@@ -1,14 +1,14 @@
 import{a as L,A as q,i as w}from"./assets/vendor-B3sBNmPP.js";(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))s(o);new MutationObserver(o=>{for(const n of o)if(n.type==="childList")for(const m of n.addedNodes)m.tagName==="LINK"&&m.rel==="modulepreload"&&s(m)}).observe(document,{childList:!0,subtree:!0});function r(o){const n={};return o.integrity&&(n.integrity=o.integrity),o.referrerPolicy&&(n.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?n.credentials="include":o.crossOrigin==="anonymous"?n.credentials="omit":n.credentials="same-origin",n}function s(o){if(o.ep)return;o.ep=!0;const n=r(o);fetch(o.href,n)}})();const P="https://furniture-store-v2.b.goit.study/api/",u=document.querySelector(".header"),$=document.querySelector(".burger-btn"),I=document.querySelector(".close-btn"),M=document.querySelector(".close-btn-tablet"),T=document.querySelector(".overlay"),_=document.querySelector(".js-review");document.querySelector(".review-stars");const g=document.querySelector(".button-review-left"),p=document.querySelector(".button-review-right"),j="feedbacks";let f=[],a=0;function h(){const e=window.innerWidth;if(e<768)return 1;if(e>=768&&e<1440)return 2;if(e>=1440)return 3}async function O(e=1){return(await L.get(`${P}${j}`,{params:{page:e}})).data.feedbacks}function A(e){const t=Math.floor(e),r=e%1>=.5,s=5-t-(r?1:0);let o="";for(let n=0;n<t;n++)o+=`
       <svg width="20" height="20" class="star-icon">
-        <use href="./img/icons.svg#icon-star-fill"></use>
+        <use href="./src/img/icons.svg#icon-star-fill"></use>
       </svg>
     `;r&&(o+=`
       <svg width="20" height="20" class="star-icon">
-        <use href="./img/icons.svg#icon-star-half"></use>
+        <use href="./src/img/icons.svg#icon-star-half"></use>
       </svg>
     `);for(let n=0;n<s;n++)o+=`
       <svg width="20" height="20" class="star-icon">
-        <use href="./img/icons.svg#icon-star-blank"></use>
+        <use href="./src/img/icons.svg#icon-star-blank"></use>
       </svg>
     `;return`<div class="review-stars">${o}</div>`}function N(e){return e>3.3&&e<=3.7?3.5:e>=3.8&&e<=4.2?4:Math.round(e)}function x(e){return e.map(({rate:t,descr:r,name:s})=>{const o=N(t);return`
     <li class="review-exemplar">
