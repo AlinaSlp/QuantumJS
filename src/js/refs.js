@@ -24,3 +24,8 @@ export const furnitureList = document.querySelector(
   '.products-grid.furniture-list-js'
 );
 export const overlay = document.querySelector('.modal-overlay');
+
+export const popularListEl = document.querySelector('.popular-products__list');
+export const btnPrev = document.querySelector('.popular-products__btn--prev');
+export const btnNext = document.querySelector('.popular-products__btn--next');
+export const paginationEl = document.querySelector('.popular-products__pagination');

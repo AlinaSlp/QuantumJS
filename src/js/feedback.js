@@ -126,7 +126,6 @@ export async function initReviews() {
   1440: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 32 },
   },
  });
-  setSlideWidths(swiper);
 
   window.addEventListener('resize', () => setSlideWidths(swiper));
 }

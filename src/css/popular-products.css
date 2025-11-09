@@ -1,0 +1,32 @@
+.popular-products-swiper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.popular-products__btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.popular-products__btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.popular-products__container {
+    flex: 1;
+    overflow: hidden;
+}
+
+.popular-products__list {
+    display: flex;
+    gap: 1rem;
+}
+
+.swiper-slide {
+    list-style: none;
+    flex: 0 0 auto;
+}
