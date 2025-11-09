@@ -18,12 +18,12 @@
 
 .popular-products__container {
     overflow: hidden;
-    padding-bottom: 60px
 }
 
 .popular-products__list {
     display: flex;
     gap: 1rem;
+    margin-bottom: 48px;
 }
 
 .swiper-slide {
