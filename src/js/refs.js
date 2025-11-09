@@ -10,7 +10,7 @@ export const buttonReviewRight = document.querySelector('.button-review-right');
 export const wrapper = document.querySelector('.swiper-wrapper');
 export const Nextbtn = document.querySelector('.reviews__btn--next');
 export const Prevbtn = document.querySelector('.popular-products__btn--prev');
-export const paginationE2 = document.querySelector('.reviews__btn--prev');
+export const paginationE2 = document.querySelector('.reviews__pagination');
 
 export const categoriesListEl = document.querySelector(
   '.furniture-categories__list'
@@ -24,12 +24,11 @@ export const loaderEl = document.querySelector('#loader');
 export const modalOverlay = document.querySelector('.prod-modal-overlay');
 export const modalWindow = document.querySelector('.prod-modal-window');
 export const closeBtn = document.querySelector('.close-modal-btn');
-export const furnitureList = document.querySelector(
-  '.products-grid.furniture-list-js'
-);
 export const overlay = document.querySelector('.modal-overlay');
 
 export const popularListEl = document.querySelector('.popular-products__list');
 export const btnPrev = document.querySelector('.popular-products__btn--prev');
 export const btnNext = document.querySelector('.popular-products__btn--next');
 export const paginationEl = document.querySelector('.popular-products__pagination');
+
+export const furnitureLists = [popularListEl, productsListEl];

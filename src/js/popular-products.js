@@ -42,7 +42,7 @@ async function initPopularProducts() {
     const swiper = new Swiper('.popular-products__container', {
       modules: [Navigation, Pagination],
       slidesPerView: 4,
-      spaceBetween: 20,
+      spaceBetween: 10,
       navigation: {
         nextEl: btnNext,
         prevEl: btnPrev,
@@ -53,9 +53,9 @@ async function initPopularProducts() {
         type: 'bullets',
       },
       breakpoints: {
-        0: { slidesPerView: 1 },
+        375: { slidesPerView: 1 },
         768: { slidesPerView: 2 },
-        1024: { slidesPerView: 4 },
+        1440: { slidesPerView: 4 },
       },
       on: {
         slideChange: function () {
@@ -63,6 +63,17 @@ async function initPopularProducts() {
           btnNext.disabled = this.isEnd;
         },
       },
+      watchOverflow: true,
+      on: {
+    init: function() {
+      btnPrev.disabled = this.isBeginning;
+      btnNext.disabled = this.isEnd;
+    },
+    slideChange: function() {
+      btnPrev.disabled = this.isBeginning;
+      btnNext.disabled = this.isEnd;
+    },
+  },
     });
 
     // Ініціалізація кнопок
