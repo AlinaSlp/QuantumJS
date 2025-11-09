@@ -126,3 +126,5 @@ form?.addEventListener('submit', async e => {
 });
 
 export { open as openOrderModal, close as closeOrderModal };
+import { closeModal as closeProductModal } from './product-modal.js';
+
