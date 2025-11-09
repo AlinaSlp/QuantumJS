@@ -7,6 +7,7 @@ import { closeModal as closeProductModal } from './product-modal.js';
 const form = overlay?.querySelector('.modal-form');
 let orderData = {};
 
+// === ВІДКРИТТЯ МОДАЛКИ ===
 function open({ modelId = '', color = '' } = {}) {
   if (!overlay) return;
   orderData = { modelId, color };
@@ -14,14 +15,31 @@ function open({ modelId = '', color = '' } = {}) {
   document.body.style.overflow = 'hidden';
 }
 
+// === ЗАКРИТТЯ МОДАЛКИ ===
 function close() {
   if (!overlay) return;
   overlay.classList.remove('is-open');
   document.body.style.overflow = '';
   orderData = {};
+  // прибрати червоні рамки після закриття
+  [...form.elements].forEach(el => el.classList.remove('input-error'));
 }
 
-// Testing only - delete after product model handles submit
+// === ОБРОБНИКИ ===
+
+// кнопка закриття
+overlay?.querySelector('.modal-close')?.addEventListener('click', close);
+
+// клік по оверлею
+overlay?.addEventListener('click', e => e.target === overlay && close());
+
+// клавіша Escape
+document.addEventListener(
+  'keydown',
+  e => e.key === 'Escape' && overlay?.classList.contains('is-open') && close()
+);
+
+// відкриття через тестову кнопку (видалити після інтеграції)
 document.addEventListener('click', e => {
   const btn = e.target.closest('.modal-sub-btn');
   if (!btn) return;
@@ -37,22 +55,34 @@ document.addEventListener('click', e => {
 
   document.querySelector('.prod-modal-overlay')?.classList.remove('is-open');
 
-  console.log(modelId, color);
   open({ modelId, color });
 });
 
-overlay?.querySelector('.modal-close')?.addEventListener('click', close);
-overlay?.addEventListener('click', e => e.target === overlay && close());
-document.addEventListener(
-  'keydown',
-  e => e.key === 'Escape' && overlay?.classList.contains('is-open') && close()
-);
+// === ВАЛІДАЦІЯ І ПОДСВІЧУВАННЯ ПОЛІВ ===
+[...form?.elements].forEach(el => {
+  if (el.tagName !== 'BUTTON') {
+    el.addEventListener('input', () => el.classList.remove('input-error'));
+  }
+});
 
+// === ПОДАЧА ФОРМИ ===
 form?.addEventListener('submit', async e => {
   e.preventDefault();
 
-  if (!form.checkValidity()) {
-    form.reportValidity();
+  // прибираємо попередні помилки
+  [...form.elements].forEach(el => el.classList.remove('input-error'));
+
+  // перевірка валідності
+  let hasError = false;
+  [...form.elements].forEach(el => {
+    if (el.tagName !== 'BUTTON' && !el.checkValidity()) {
+      el.classList.add('input-error');
+      hasError = true;
+    }
+  });
+
+  if (hasError) {
+    form.reportValidity(); // стандартні підказки браузера
     return;
   }
 

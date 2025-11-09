@@ -118,20 +118,9 @@
   color: rgba(8, 12, 9, 0.6);
 }
 
-.modal-field input:invalid,
-.modal-field textarea:invalid {
-  border-color: #6b0609;
-  color: #6b0609;
-}
-
 .modal-field input:focus:invalid,
 .modal-field textarea:focus:invalid {
   box-shadow: 0 0 0 2px rgba(107, 6, 9, 0.06);
-}
-
-.modal-field input:invalid::placeholder,
-.modal-field textarea:invalid::placeholder {
-  color: #6b0609;
 }
 
 .modal-field.error .error-text {
@@ -185,6 +174,11 @@
 .modal-button:disabled {
   opacity: 0.2;
   cursor: not-allowed;
+}
+
+.input-error {
+  border: 2px solid red;
+  background-color: rgba(8, 12, 9, 0.05);
 }
 
 /* Tablet styles */

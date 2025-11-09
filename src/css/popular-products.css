@@ -78,3 +78,13 @@
 .popular-products__btn:active {
     background-color: #6b0609;
 }
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #080c09;
+  opacity: 1;
+}
+
+.swiper-slide.product-card {
+  width: 310px;    /* точна ширина картки */
+  flex-shrink: 0;  /* не стискати картку */
+}
