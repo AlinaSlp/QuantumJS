@@ -14,7 +14,18 @@
 }
 
 .js-review.swiper-wrapper {
+  display: flex;
   padding-bottom: 100px;
+}
+
+.review-exemplar {
+  flex: 0 0 auto;
+  width: 100%;   
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  list-style: none;
 }
 
 .reviews-controls {
@@ -24,7 +35,6 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
   padding: 0 16px;
   z-index: 10;
 }
@@ -32,17 +42,6 @@
 .swiper-pagination,
 .nav-wrap {
   pointer-events: all;
-}
-
-.review-exemplar {
-  width: auto;
-  padding: 0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  flex-grow: 0;
-  justify-content: flex-start;
 }
 
 .swiper-pagination {

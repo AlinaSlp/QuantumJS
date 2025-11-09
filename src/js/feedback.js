@@ -1,4 +1,3 @@
-// ---- МОДУЛЬНІ ІМПОРТИ (без bundle) ----
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -6,8 +5,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import axios from 'axios';
 import { BASE_URL } from './pixabay-api';
+
+
 // Селектори / константи
-const ROOT = '.reviews-swiper';      // контейнер Swiper
+const ROOT = '.reviews-swiper';  // контейнер Swiper
 const LIST = '.review.js-review';     // <ul class="review js-review">
 const SPRITE = './img/icons.svg';     // шлях до спрайта
 const STAR_FULL = 'icon-star-fill';
@@ -87,15 +88,18 @@ export async function initReviews() {
   
  // 1/2/3 картки на брейкпоінтах; стрілки праворуч; булети зліва
  const swiper = new Swiper(ROOT, {
-  modules: [Navigation, Pagination],
-  slidesPerView: 1,
-  spaceBetween: 24,
-  watchOverflow: true,
-  pagination: {
-   el: '.swiper-pagination',
-   clickable: true,
-   renderBullet: (i, className) =>
-    `<button class="${className}" type="button" aria-label="Перейти до відгуку ${i + 1}"></button>`,
+    modules: [Navigation, Pagination],
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 24,
+    watchOverflow: true,
+    centeredSlides: false,
+    loop: false,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: (i, className) =>
+        `<button class="${className}" type="button" aria-label="Перейти до відгуку ${i + 1}"></button>`,
   },
   navigation: {
    nextEl: '.swiper-button-next',
@@ -103,11 +107,11 @@ export async function initReviews() {
    disabledClass: 'is-disabled',
   },
   breakpoints: {
-   768: { slidesPerView: 2, spaceBetween: 24 },
-   1440: { slidesPerView: 3, spaceBetween: 32 },
-   },
- centerInsufficientSlides: true,
-  });
+  768: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 24 },
+  1440: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 32 },
+  },
+ });
+  setSlideWidths(swiper);
 
-  swiper.update();
+  window.addEventListener('resize', () => setSlideWidths(swiper));
 }
