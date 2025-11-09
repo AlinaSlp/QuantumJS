@@ -18,7 +18,7 @@
     <script type="module" crossorigin src="/QuantumJS/index.js"></script>
     <link rel="modulepreload" crossorigin href="/QuantumJS/assets/vendor-mUhAJKfp.js">
     <link rel="stylesheet" crossorigin href="/QuantumJS/assets/vendor-BMbto7SD.css">
-    <link rel="stylesheet" crossorigin href="/QuantumJS/assets/index-N2bARExz.css">
+    <link rel="stylesheet" crossorigin href="/QuantumJS/assets/index-DG0fuVtP.css">
   </head>
    
   <body>
@@ -268,6 +268,35 @@
         </div>
     </div>
 </section>
+      <section class="popular-products section" id="popular-products-section">
+    <div class="container">
+        <div class="popular-products__header">
+            <h2 class="popular-products__title">Популярні товари</h2>
+        </div>
+
+        <div class="popular-products-swiper">
+            <div class="swiper popular-products__container">
+                <ul class="swiper-wrapper popular-products__list"></ul>
+            </div>
+
+            <div class="popular-products__nav">
+            <button class="popular-products__btn popular-products__btn--prev" type="button" disabled>
+                <svg width="24" height="24">
+                    <use href="/QuantumJS/assets/icons-fSjz1rIH.svg#icon-left-arrow-alt"></use>
+                </svg>
+            </button>
+
+            <button class="popular-products__btn popular-products__btn--next" type="button">
+                <svg width="24" height="24">
+                    <use href="/QuantumJS/assets/icons-fSjz1rIH.svg#icon-right-arrow-alt"></use>
+                </svg>
+            </button>
+            </div>
+        </div>
+
+        <div class="popular-products__pagination"></div>
+    </div>
+</section> 
       <section class="faq" id="faq-section">
     <div class="container">
         <h2 class="faq-title">Часті питання</h2>
@@ -348,38 +377,35 @@
         </div>
     </div>
 </section>
-      <section class="reviews" id="feedback">
+      <section class="reviews section" id="feedback">
   <div class="container">
-    <h2 class="title-review">Відгуки клієнтів</h2>
-    <p class="paragraf-reviews">
-      Дізнайтеся, що кажуть наші задоволені клієнти про нашу меблі.
-    </p>
+    <div class="reviews__header">
+      <h2 class="reviews__title">Відгуки клієнтів</h2>
+      <p class="reviews__description">
+        Дізнайтеся, що кажуть наші задоволені клієнти про нашу меблі.
+      </p>
+    </div>
 
-    <div class="reviews-content">
-      <div class="reviews-swiper swiper">
-        <ul class="review js-review swiper-wrapper" role="list"></ul>
-        
-        
-        <div class="reviews-controls">
-          <div class="swiper-pagination"></div>
-          <div class="nav-wrap">
-            <button class="swiper-button-prev" type="button" aria-label="Попередній">
-              <svg width="24" height="24">
-                <use href="/QuantumJS/assets/icons-fSjz1rIH.svg#icon-left-arrow-alt"></use>
-              </svg>
-            </button>
+    <div class="reviews__swiper-wrapper">
+      <div class="swiper reviews__container">
+        <ul class="swiper-wrapper reviews__list js-review" role="list"></ul>
+      </div>
 
-            <button class="swiper-button-next" type="button" aria-label="Наступний">
-              <svg width="24" height="24">
-                <use href="/QuantumJS/assets/icons-fSjz1rIH.svg#icon-right-arrow-alt"></use>
-              </svg>
-            </button>
-          </div>
+      <div class="reviews__nav">
+        <button class="reviews__btn reviews__btn--prev" type="button" aria-label="Попередній">
+          <svg width="24" height="24">
+            <use href="/QuantumJS/assets/icons-fSjz1rIH.svg#icon-left-arrow-alt"></use>
+          </svg>
+        </button>
 
-        </div>
+        <button class="reviews__btn reviews__btn--next" type="button" aria-label="Наступний">
+          <svg width="24" height="24">
+            <use href="/QuantumJS/assets/icons-fSjz1rIH.svg#icon-right-arrow-alt"></use>
+          </svg>
+        </button>
       </div>
     </div>
-    <!-- /reviews-content -->
+    <div class="reviews__pagination swiper-pagination"></div>
   </div>
 </section>
       <div class="prod-modal-overlay is-close">
