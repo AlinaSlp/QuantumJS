@@ -7,10 +7,12 @@ import axios from 'axios';
 import { BASE_URL } from './pixabay-api';
 
 
+
+
 // Селектори / константи
 const ROOT = '.reviews-swiper';  // контейнер Swiper
 const LIST = '.review.js-review';     // <ul class="review js-review">
-const SPRITE = './img/icons.svg';     // шлях до спрайта
+const SPRITE = '../img/icons.svg';     // шлях до спрайта
 const STAR_FULL = 'icon-star-fill';
 const STAR_HALF = 'icon-star-half';
 // DOM
