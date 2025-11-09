@@ -1,9 +1,7 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-import { overlay } from './refs';
-import { closeModal as closeProductModal } from './product-modal.js';
-
+const overlay = document.querySelector('.modal-overlay');
 const form = overlay?.querySelector('.modal-form');
 let orderData = {};
 
