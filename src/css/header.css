@@ -6,10 +6,10 @@ html {
   overflow: hidden;
 }
 
-.header .container {
-  background-color: #ffffff;
+.header {
   padding-top: 17px;
   padding-bottom: 17px;
+  background-color: #ffffff;
 }
 
 .header-wrapper {
@@ -184,7 +184,7 @@ html {
   .header {
     position: relative;
   }
-
+  
   .overlay {
     display: block;
     position: static;

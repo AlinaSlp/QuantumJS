@@ -1,11 +1,9 @@
-.review {
+.reviews {
   padding: 0;
   display: flex;
   align-items: stretch;
-}
-
-.reviews .container {
-  padding: 64px 20px;
+  padding-bottom: 64px;
+  padding-top: 64px;
 }
 
 .reviews__swiper-wrapper {
@@ -146,15 +144,17 @@
 }
 
 @media screen and (min-width: 768px) {
-  .review {
+  .reviews {
     display: flex;
     gap: 24px;
+    padding-bottom: 32px;
+    padding-top: 32px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .reviews .container {
-    padding: 64px;
+  .reviews {
+    padding: 64px 0;
   }
 
   .reviews-swiper {

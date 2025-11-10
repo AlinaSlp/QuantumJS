@@ -1,6 +1,6 @@
-.container {
-  padding-top: 48px;
+.faq {
   padding-bottom: 48px;
+  padding-top: 48px;
 }
 
 .accordion-container {
@@ -79,15 +79,15 @@
 }
 
 @media only screen and (min-width: 768px) {
- .container {
-    padding: 32px;
-  }
+ 
 }
 
 @media only screen and (min-width: 1440px) {
-  .container {
-    padding: 80px 64px;
+  .faq {
+    padding-bottom: 80px;
+    padding-top: 80px;
   }
+
   .accordion-container {
     margin-left: 224px;
     margin-right: 224px;
