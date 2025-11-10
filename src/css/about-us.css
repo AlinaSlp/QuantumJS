@@ -16,10 +16,15 @@
 }
 
 .about-us-text {
-    width: 335px;
     margin-top: 24px;
     margin-bottom: 24px;
     font-size: 18px;
+}
+
+@media screen and (min-width: 375px) {
+    .about-us-text {
+        width: 335px;
+    }
 }
 
 @media (min-width: 768px) {

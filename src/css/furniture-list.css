@@ -86,7 +86,7 @@
 }
 
 .furniture__load-more {
-  width: 340px;
+  padding: clamp(0.5rem, 1vw, 0.6rem) clamp(5rem, 2vw, 3rem);
   margin: 32px auto 0;
 }
 
@@ -273,6 +273,13 @@
 .product-card__btn:active {
   transform: translateY(1px);
 }
+
+@media screen and (min-width: 375px) {
+.furniture__load-more {
+  width: 340px;
+}
+}
+
 
 @media (min-width: 768px) {
   .furniture-categories__list {
