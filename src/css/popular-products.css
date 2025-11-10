@@ -1,28 +1,36 @@
-/* Wrapper */
 .popular-products-swiper {
+  align-items: center;
   position: relative;
-  margin-top: 24px;
 }
 
-/* Swiper viewport */
+.popular-products__btn {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.popular-products__btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
 .popular-products__container {
-  width: 100%;
   overflow: hidden;
 }
 
-/* Swiper wrapper/list */
 .popular-products__list {
-  margin: 0 0 32px 0;
-  padding: 0;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 48px;
+}
+
+.swiper-slide {
   list-style: none;
+  flex: 0 0 auto;
 }
 
-/* Slides: let Swiper set widths; just box them */
-.popular-products__container .swiper-slide {
-  box-sizing: border-box;
-}
-
-/* Title */
 .popular-products__title {
   font-weight: 700;
   font-size: 36px;
@@ -33,12 +41,12 @@
   margin-bottom: 24px;
 }
 
-/* Arrows */
 .popular-products__nav {
+  position: absolute;
+  right: 10px;
   display: flex;
-  justify-content: flex-end;
   gap: 10px;
-  margin-bottom: 12px;
+  z-index: 10;
 }
 
 .popular-products__btn {
@@ -53,19 +61,7 @@
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.3s;
-}
-
-.popular-products__btn svg use {
-  fill: #080c09;
-  transition: fill 0.3s;
-}
-
-.popular-products__btn:hover:not(:disabled) {
-  background-color: #975052;
-}
-
-.popular-products__btn:hover:not(:disabled) svg use {
-  fill: #ffffff;
+  z-index: 20;
 }
 
 .popular-products__btn:disabled {
@@ -73,36 +69,22 @@
   cursor: default;
 }
 
-/* Pagination dots */
-.popular-products__pagination {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  justify-content: flex-start;
-  margin-bottom: 16px;
+.popular-products__btn:hover,
+.popular-products__btn:hover {
+  background-color: #975052;
 }
 
-.popular-products__bullet {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #d6d6d6;
+.popular-products__btn:active,
+.popular-products__btn:active {
+  background-color: #6b0609;
 }
 
-.popular-products__bullet--active {
-  background: #080c09;
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #080c09;
+  opacity: 1;
 }
 
-/* Tablet */
-@media screen and (min-width: 768px) {
-  .popular-products__nav {
-    margin-bottom: 16px;
-  }
-}
-
-/* Desktop */
-@media screen and (min-width: 1440px) {
-  .popular-products__nav {
-    margin-bottom: 20px;
-  }
+.swiper-slide.product-card {
+  width: 310px; /* точна ширина картки */
+  flex-shrink: 0; /* не стискати картку */
 }
