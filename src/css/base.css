@@ -50,8 +50,8 @@ body {
   }
 }
 
-@media only screen and (max-width: 374px) {
+/* @media only screen and (max-width: 374px) {
   .section {
     padding: 0 20px;
   }
-}
+} */

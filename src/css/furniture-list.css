@@ -1,4 +1,4 @@
-.furniture{
+.furniture {
   padding-bottom: 48px;
   padding-top: 48px;
 }
@@ -18,10 +18,11 @@
 .furniture-categories {
   margin-bottom: 40px;
 }
+
 .furniture-categories__list {
   display: grid;
-  grid-template-columns: repeat(2, 159px);
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 2fr));
+  gap: 5px;
   justify-content: center;
   padding: 0;
   margin: 40px 0;
@@ -29,12 +30,10 @@
 }
 
 .furniture-categories__item {
-  width: 160px;
   height: 122px;
 }
 
 .category-chip {
-  position: relative;
   width: 100%;
   padding: 10px 12px;
   height: 122px;
@@ -61,7 +60,7 @@
 
 .category-chip::after {
   content: '';
-  position: absolute;
+
   inset: 0;
   background: linear-gradient(
     180deg,
@@ -71,7 +70,6 @@
 }
 
 .category-chip__label {
-  position: relative;
   color: #fff;
   font-weight: 700;
   font-size: 14px;
@@ -86,7 +84,7 @@
 }
 
 .furniture__load-more {
-  width: 340px;
+  padding: clamp(0.5rem, 1vw, 0.6rem) clamp(5rem, 2vw, 3rem);
   margin: 32px auto 0;
 }
 
@@ -272,6 +270,21 @@
 }
 .product-card__btn:active {
   transform: translateY(1px);
+}
+
+@media screen and (min-width: 375px) {
+  .furniture__load-more {
+    width: 340px;
+  }
+
+  .furniture-categories__list {
+    grid-template-columns: repeat(2, 159px);
+    gap: 16px;
+  }
+
+  .furniture-categories__item {
+    width: 160px;
+  }
 }
 
 @media (min-width: 768px) {
