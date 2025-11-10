@@ -95,7 +95,7 @@
 
 .reviews__btn--prev:disabled,
 .reviews__btn--next:disabled {
-  opacity: 0.5;
+  opacity: 0.3;
   cursor: not-allowed;
   pointer-events: none;
 }
