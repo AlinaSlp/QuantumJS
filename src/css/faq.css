@@ -20,6 +20,7 @@
 .ac {
   border-top: 1px solid rgba(8, 12, 9, 0.15);
 }
+
 .ac-header {
   padding: 21px 0;
 }
@@ -66,9 +67,11 @@
 .ac.is-open .ac-panel {
   max-height: 865px;
 }
+
 .ac-text {
   padding: 0 0 24px 0;
 }
+
 .ac:last-child {
   border-bottom: 1px solid rgba(8, 12, 9, 0.15);
 }
@@ -76,10 +79,6 @@
 .faq .ac .ac-trigger::after {
   content: none;
   display: none;
-}
-
-@media only screen and (min-width: 768px) {
- 
 }
 
 @media only screen and (min-width: 1440px) {
