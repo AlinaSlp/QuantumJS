@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import axios from 'axios';
 import { BASE_URL } from './pixabay-api';
 import iconsUrl from '../img/icons.svg';
-import { Nextbtn, Prevbtn, paginationE2 } from './refs.js';
+import { Nextbtn, Prevbtn, btnNext, btnPrev, paginationE2 } from './refs.js';
 
 
 // ---- СЕЛЕКТОРИ ----
@@ -95,6 +95,12 @@ export async function initReviews() {
     breakpoints: {
       768: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 24 },
       1440: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 32 },
+    },
+    on: {
+      slideChange: function () {
+        btnPrev.disabled = this.isBeginning;
+        btnNext.disabled = this.isEnd;
+      },
     },
   });
 }
