@@ -1,4 +1,4 @@
-.furniture{
+.furniture {
   padding-bottom: 48px;
   padding-top: 48px;
 }
@@ -34,7 +34,6 @@
 }
 
 .category-chip {
-  position: relative;
   width: 100%;
   padding: 10px 12px;
   height: 122px;
@@ -61,7 +60,7 @@
 
 .category-chip::after {
   content: '';
-  position: absolute;
+
   inset: 0;
   background: linear-gradient(
     180deg,
@@ -71,7 +70,6 @@
 }
 
 .category-chip__label {
-  position: relative;
   color: #fff;
   font-weight: 700;
   font-size: 14px;
@@ -275,20 +273,19 @@
 }
 
 @media screen and (min-width: 375px) {
-.furniture__load-more {
-  width: 340px;
-}
+  .furniture__load-more {
+    width: 340px;
+  }
 
-.furniture-categories__list {
-  grid-template-columns: repeat(2, 159px);
-  gap: 16px;
-}
+  .furniture-categories__list {
+    grid-template-columns: repeat(2, 159px);
+    gap: 16px;
+  }
 
-.furniture-categories__item {
-  width: 160px;
+  .furniture-categories__item {
+    width: 160px;
+  }
 }
-}
-
 
 @media (min-width: 768px) {
   .furniture-categories__list {
