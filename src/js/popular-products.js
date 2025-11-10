@@ -43,7 +43,7 @@ async function initPopularProducts() {
 
     const swiper = new Swiper('.popular-products__container', {
       modules: [Navigation, Pagination],
-      slidesPerView: 4,
+      slidesPerView: 1,
       spaceBetween: 10,
       navigation: {
         nextEl: btnNext,
@@ -55,22 +55,10 @@ async function initPopularProducts() {
         type: 'bullets',
       },
       breakpoints: {
-        375: { slidesPerView: 1 },
-        768: { slidesPerView: 2 },
-        1440: { slidesPerView: 4 },
+        768: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 16 },
+        1440: { slidesPerView: 4,slidesPerGroup: 4, spaceBetween: 24 },
       },
       on: {
-        slideChange: function () {
-          btnPrev.disabled = this.isBeginning;
-          btnNext.disabled = this.isEnd;
-        },
-      },
-      watchOverflow: true,
-      on: {
-        init: function () {
-          btnPrev.disabled = this.isBeginning;
-          btnNext.disabled = this.isEnd;
-        },
         slideChange: function () {
           btnPrev.disabled = this.isBeginning;
           btnNext.disabled = this.isEnd;
@@ -78,9 +66,6 @@ async function initPopularProducts() {
       },
     });
 
-    // Ініціалізація кнопок
-    btnPrev.disabled = true;
-    btnNext.disabled = products.length <= swiper.params.slidesPerView;
   } catch (err) {
     console.error('Помилка завантаження популярних товарів:', err);
   }

@@ -17,12 +17,11 @@
 }
 
 .popular-products__container {
-  overflow: hidden;
+  overflow: visible;
 }
 
 .popular-products__list {
   display: flex;
-  gap: 1rem;
   margin-bottom: 48px;
 }
 
@@ -82,9 +81,4 @@
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #080c09;
   opacity: 1;
-}
-
-.swiper-slide.product-card {
-  width: 310px; /* точна ширина картки */
-  flex-shrink: 0; /* не стискати картку */
 }
