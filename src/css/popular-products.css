@@ -9,19 +9,6 @@
   padding-bottom: 24px;
 }
 
-.popular-products__btn {
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-  padding: 0.5rem;
-}
-
-.popular-products__btn:disabled {
-  opacity: 0.3;
-  cursor: default;
-}
-
 .popular-products__list {
   display: flex;
   margin-bottom: 48px;
