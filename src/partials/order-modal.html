@@ -1,6 +1,6 @@
 <div class="modal-overlay">
   <div class="modal section">
-    <button class="modal-close">
+    <button class="modal-close" aria-label="Закрити вікно">
       <svg width="32" height="32">
         <use href="./img/icons.svg#icon-cross"></use>
       </svg>
@@ -21,6 +21,7 @@
           required
           minlength="2"
           maxlength="64"
+          aria-label="Введіть ім'я"
         />
       </div>
 
@@ -34,6 +35,7 @@
           required
           pattern="[0-9]{12}"
           title="Введіть 12 цифр без пробілів"
+          aria-label="Введіть номер телефону"
         />
       </div>
 
@@ -44,10 +46,11 @@
           name="comment"
           placeholder="Введіть ваш коментар"
           maxlength="256"
+          aria-label="Додайте коментар"
         ></textarea>
       </div>
 
-      <button type="submit" class="button modal-button">
+      <button type="submit" class="button modal-button" aria-label="Надіслати заявку">
         Надіслати заявку
       </button>
     </form>
