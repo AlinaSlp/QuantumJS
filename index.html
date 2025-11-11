@@ -25,19 +25,19 @@
     <header class="header">
   <div class="container">
     <div class="header-wrapper">
-      <a href="./index.html" class="logo-header">
+      <a href="./index.html" class="logo-header" aria-label="Головна сторінка">
         <svg class="logo-header-icon" width="158" height="35">
           <use href="/QuantumJS/assets/icons-fSjz1rIH.svg#icon-logo-black"></use>
         </svg>
       </a>
 
-      <button type="button" class="close-btn-tablet">
+      <button type="button" class="close-btn-tablet" aria-label="Закрити вікно">
         <svg class="close-btn-icon" width="32" height="32">
           <use href="/QuantumJS/assets/icons-fSjz1rIH.svg#icon-cross"></use>
         </svg>
       </button>
 
-      <button type="button" class="burger-btn">
+      <button type="button" class="burger-btn" aria-label="Мобільне меню">
         <svg class="burger-btn-icon" width="32" height="32">
           <use href="/QuantumJS/assets/icons-fSjz1rIH.svg#icon-menu"></use>
         </svg>
@@ -51,7 +51,7 @@
               </svg>
             </a>
 
-            <button type="button" class="close-btn">
+            <button type="button" class="close-btn" aria-label="Закрити вікно">
               <svg class="close-btn-icon" width="32" height="32">
                 <use href="/QuantumJS/assets/icons-fSjz1rIH.svg#icon-cross"></use>
               </svg>
@@ -100,7 +100,7 @@
       ваш простір. Наша продукція поєднує в собі елегантність та
       функціональність.
     </p>
-    <a href="#feedback" class="button hero-button" data-modal-open
+    <a href="#feedback" class="button hero-button" aria-label="Перейти до відгуків" data-modal-open
       >Що про нас думають</a
     >
   </div>
@@ -119,7 +119,7 @@
         <li class="furniture-categories__item">
           <button
             class="category-chip category-chip--all active-frame"
-            type="button"
+            type="button" aria-label="Показати всі товари"
           >
             <span class="category-chip__label furniture-categories__js"
               >Всі товари</span
@@ -130,6 +130,7 @@
           <button
             class="category-chip category-chip--soft"
             type="button"
+            aria-label="Категорія м'які меблі"
             data-category-id
           >
             <span class="category-chip__label furniture-categories__js"></span>
@@ -139,6 +140,7 @@
           <button
             class="category-chip category-chip--wardrobes"
             type="button"
+            aria-label="Категорія шафи та системи зберігання"
             data-category-id
           >
             <span class="category-chip__label furniture-categories__js"></span>
@@ -148,6 +150,7 @@
           <button
             class="category-chip category-chip--beds"
             type="button"
+            aria-label="Категорія ліжка та матраци"
             data-category-id
           >
             <span class="category-chip__label furniture-categories__js"></span>
@@ -157,6 +160,7 @@
           <button
             class="category-chip category-chip--tables"
             type="button"
+            aria-label="Категорія столи"
             data-category-id
           >
             <span class="category-chip__label furniture-categories__js"></span>
@@ -166,6 +170,7 @@
           <button
             class="category-chip category-chip--chairs"
             type="button"
+            aria-label="Категорія стільці та табурети"
             data-category-id
           >
             <span class="category-chip__label furniture-categories__js"></span>
@@ -175,6 +180,7 @@
           <button
             class="category-chip category-chip--kitchens"
             type="button"
+            aria-label="Категорія кухні"
             data-category-id
           >
             <span class="category-chip__label furniture-categories__js"></span>
@@ -184,6 +190,7 @@
           <button
             class="category-chip category-chip--kids"
             type="button"
+            aria-label="Категорія меблі для дитячої"
             data-category-id
           >
             <span class="category-chip__label furniture-categories__js"></span>
@@ -193,6 +200,7 @@
           <button
             class="category-chip category-chip--office"
             type="button"
+            aria-label="Категорія меблі для офісу"
             data-category-id
           >
             <span class="category-chip__label furniture-categories__js"></span>
@@ -202,6 +210,7 @@
           <button
             class="category-chip category-chip--hallway"
             type="button"
+            aria-label="Категорія меблі для передпокою"
             data-category-id
           >
             <span class="category-chip__label furniture-categories__js"></span>
@@ -211,6 +220,7 @@
           <button
             class="category-chip category-chip--bathroom"
             type="button"
+            aria-label="Категорія меблі для ванної кімнати"
             data-category-id
           >
             <span class="category-chip__label furniture-categories__js"></span>
@@ -220,6 +230,7 @@
           <button
             class="category-chip category-chip--outdoor"
             type="button"
+            aria-label="Категорія садові та вуличні меблі"
             data-category-id
           >
             <span class="category-chip__label furniture-categories__js"></span>
@@ -229,6 +240,7 @@
           <button
             class="category-chip category-chip--decor"
             type="button"
+            aria-label="Категорія декор та аксесуари"
             data-category-id
           >
             <span class="category-chip__label furniture-categories__js"></span>
@@ -251,6 +263,7 @@
         class="button furniture__load-more"
         type="button"
         data-action="load-more"
+        aria-label="Показати ще"
         hidden
       >
         Показати ще
@@ -307,13 +320,13 @@
             </div>
 
             <div class="popular-products__nav">
-            <button class="popular-products__btn popular-products__btn--prev" type="button" disabled>
+            <button class="popular-products__btn popular-products__btn--prev" type="button" aria-label="Попередній">
                 <svg width="24" height="24">
                     <use href="/QuantumJS/assets/icons-fSjz1rIH.svg#icon-left-arrow-alt"></use>
                 </svg>
             </button>
 
-            <button class="popular-products__btn popular-products__btn--next" type="button">
+            <button class="popular-products__btn popular-products__btn--next" type="button" aria-label="Наступний">
                 <svg width="24" height="24">
                     <use href="/QuantumJS/assets/icons-fSjz1rIH.svg#icon-right-arrow-alt"></use>
                 </svg>
@@ -489,7 +502,7 @@
 
       <div class="prod-modal-overlay is-close">
   <div class="prod-modal-window">
-    <button class="close-modal-btn">
+    <button class="close-modal-btn" aria-label="Закрити вікно">
       <svg width="32" height="32" class="close-icon">
         <use href="/QuantumJS/assets/icons-fSjz1rIH.svg#icon-cross"></use>
       </svg>
@@ -567,7 +580,7 @@
         сімейного відпочинку. Оббивка з якісної зносостійкої тканини.
       </h3>
       <h3 class="prod-size">Розміри: 280x180x85</h3>
-      <button type="submit" class="modal-sub-btn button">
+      <button type="submit" class="modal-sub-btn button" aria-label="Перейти до замовлення">
         Перейти до замовлення
       </button>
     </div>
@@ -576,7 +589,7 @@
 
       <div class="modal-overlay">
   <div class="modal section">
-    <button class="modal-close">
+    <button class="modal-close" aria-label="Закрити вікно">
       <svg width="32" height="32">
         <use href="/QuantumJS/assets/icons-fSjz1rIH.svg#icon-cross"></use>
       </svg>
@@ -597,6 +610,7 @@
           required
           minlength="2"
           maxlength="64"
+          aria-label="Введіть ім'я"
         />
       </div>
 
@@ -610,6 +624,7 @@
           required
           pattern="[0-9]{12}"
           title="Введіть 12 цифр без пробілів"
+          aria-label="Введіть номер телефону"
         />
       </div>
 
@@ -620,10 +635,11 @@
           name="comment"
           placeholder="Введіть ваш коментар"
           maxlength="256"
+          aria-label="Додайте коментар"
         ></textarea>
       </div>
 
-      <button type="submit" class="button modal-button">
+      <button type="submit" class="button modal-button" aria-label="Надіслати заявку">
         Надіслати заявку
       </button>
     </form>
